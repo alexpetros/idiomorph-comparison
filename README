@@ -1,0 +1,8 @@
+The standard HTMX swaps handle text-only responses gracefully; idiomorph requires HTML formatted responses.
+
+Run any static server in this directory to show the example, such as:
+
+`python -m http.server`
+OR
+`npx serve`
+

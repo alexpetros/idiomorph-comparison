@@ -1,0 +1,48 @@
+<title>Idiomoprh Test</title>
+
+<script src="https://unpkg.com/htmx.org@1.9.2"></script>
+<script src="https://unpkg.com/idiomorph"></script>
+<script src="https://unpkg.com/idiomorph/dist/idiomorph-ext.min.js"></script>
+
+<style>
+  button { display: block; margin: 10px; }
+  div.subbed { background-color: red; }
+</style>
+
+  <h3>Regular buttons</h3>
+  <div hx-ext="morph">
+    <button hx-get="/div.html" hx-swap="innerHTML">
+      Insert inner div
+    </button>
+
+    <button hx-get="/text.txt" hx-swap="innerHTML">
+      Insert inner text
+    </button>
+
+    <button hx-get="/div.html" hx-swap="outerHTML">
+      Insert outer div
+    </button>
+
+    <button hx-get="/text.txt" hx-swap="outerHTML">
+      Insert outer text
+    </button>
+  </div>
+
+  <h3>Idiomorph buttons</h3>
+  <div hx-ext="morph">
+    <button hx-get="/div.html" hx-swap="morph:innerHTML">
+      Morph inner div
+    </button>
+
+    <button hx-get="/text.txt" hx-swap="morph:innerHTML">
+      Morph inner text
+    </button>
+
+    <button hx-get="/div.html" hx-swap="morph:outerHTML">
+      Morph outer div
+    </button>
+
+    <button hx-get="/text.txt" hx-swap="morph:outerHTML">
+      Morph outer text
+    </button>
+  </div>
